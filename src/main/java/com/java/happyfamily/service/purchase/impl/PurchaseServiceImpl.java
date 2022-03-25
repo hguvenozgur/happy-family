@@ -1,6 +1,6 @@
 package com.java.happyfamily.service.purchase.impl;
 
-import com.java.happyfamily.model.orms.Purchase;
+import com.java.happyfamily.model.orms.PurchaseModel;
 import com.java.happyfamily.model.product.ProductDetail;
 import com.java.happyfamily.model.purchase.Item;
 import com.java.happyfamily.persistence.PurchaseRepository;
@@ -24,7 +24,8 @@ public class PurchaseServiceImpl implements PurchaseService {
 
         if(productDetail.getQuantity() > 0 && productDetail.getQuantity() >= item.getQuantity()){
 
-            Purchase purchase = new Purchase(productDetail.getId(), "test", item.getQuantity(), null, null);
+            PurchaseModel purchase = new PurchaseModel(productDetail.getId(), "test",
+                    item.getQuantity(), null, null);
 
             purchaseRepository.save(purchase);
 

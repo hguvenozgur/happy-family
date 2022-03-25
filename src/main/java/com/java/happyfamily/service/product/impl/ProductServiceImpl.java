@@ -1,5 +1,6 @@
 package com.java.happyfamily.service.product.impl;
 
+import com.java.happyfamily.model.orms.ProductModel;
 import com.java.happyfamily.model.product.Product;
 import com.java.happyfamily.model.product.ProductDetail;
 import com.java.happyfamily.persistence.ProductRepository;
@@ -20,7 +21,7 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public List<Product> getAllProducts() throws Exception{
 
-        List<com.java.happyfamily.model.orms.Product> products = productRepository.findAll();
+        List<ProductModel> products = productRepository.findAll();
         if(products.size() == 0){
             throw new Exception("Products are not available!");
         }
@@ -35,7 +36,7 @@ public class ProductServiceImpl implements ProductService {
         optionalProduct = productRepository.findById(id);
 
         if(optionalProduct.isPresent()){
-            com.java.happyfamily.model.orms.Product product = (com.java.happyfamily.model.orms.Product) optionalProduct.get();
+            ProductModel product = (ProductModel) optionalProduct.get();
 
             ProductDetail productDetail = new ProductDetail();
             productDetail.setId(product.getId());
@@ -51,7 +52,7 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public ProductDetail sellProduct(Integer productId, int quantity) throws Exception{
-        com.java.happyfamily.model.orms.Product product = productRepository.getById(productId);
+        ProductModel product = productRepository.getById(productId);
         product.setQuantity(product.getQuantity()-quantity);
         if(product.getQuantity() > 0){
             productRepository.save(product);

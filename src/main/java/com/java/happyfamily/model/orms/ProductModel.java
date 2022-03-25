@@ -1,13 +1,11 @@
 package com.java.happyfamily.model.orms;
 
-import com.java.happyfamily.model.common.QuantityMetric;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
-public class Product {
+public class ProductModel {
 
     private @Id @GeneratedValue Integer id;
     private int quantity;
@@ -16,10 +14,10 @@ public class Product {
     private double price;
     private String quantityMetric;
 
-    public Product() {
+    public ProductModel() {
     }
 
-    Product(int id, int quantity, String name, String brand, double price, String quantityMetric){
+    public ProductModel(int id, int quantity, String name, String brand, double price, String quantityMetric){
 
         this.id = id;
         this.quantity = quantity;

@@ -6,7 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Purchase {
+public class PurchaseModel {
 
     private @Id @GeneratedValue(strategy = GenerationType.AUTO)Integer id;
     private int productId;
@@ -15,10 +15,10 @@ public class Purchase {
     private String payment;
     private String description;
 
-    public Purchase() {
+    public PurchaseModel() {
     }
 
-    public Purchase(int productId, String purchaser, int quantity, String payment, String description) {
+    public PurchaseModel(int productId, String purchaser, int quantity, String payment, String description) {
         this.productId = productId;
         this.purchaser = purchaser;
         this.quantity = quantity;
