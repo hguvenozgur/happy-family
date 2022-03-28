@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="392.55555555555554" y="-24.499999999999886">com.happy.model.Product</node>
+    <node x="28.5" y="442.5">com.happy.controller.HusbandController</node>
+    <node x="-31.5" y="-23.5">com.happy.controller.ProductController</node>
+    <node x="445.5" y="465.0">com.happy.repository.ProductRepository</node>
+    <node x="54.0" y="261.0">com.happy.service.ProductService</node>
+    <node x="335.5" y="249.5">com.happy.service.ProductServiceImpl</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="com.happy.controller.ProductController" target="com.happy.service.ProductService">
+      <point x="0.0" y="103.5" />
+      <point x="0.0" y="-59.0" />
+    </edge>
+    <edge source="com.happy.controller.HusbandController" target="com.happy.service.ProductService">
+      <point x="0.0" y="-37.5" />
+      <point x="0.0" y="59.0" />
+    </edge>
+    <edge source="com.happy.service.ProductServiceImpl" target="com.happy.service.ProductService">
+      <point x="-184.5" y="0.0" />
+      <point x="106.0" y="0.0" />
+    </edge>
+    <edge source="com.happy.service.ProductServiceImpl" target="com.happy.repository.ProductRepository">
+      <point x="0.0" y="70.5" />
+      <point x="0.0" y="-15.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.9" x="471.7777777777777" y="399.44444444444446" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Methods</Category>
+    <Category>Fields</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

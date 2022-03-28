@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS Product;
+CREATE TABLE Product
+(
+    storeId INT AUTO_INCREMENT PRIMARY KEY,
+    milkQty INT NOT NULL,
+    eggQty  INT NOT NULL
+);
