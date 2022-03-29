@@ -26,7 +26,7 @@ public class HusbandController {
         int milkQuantity = productService.getMilkQty();
 
         if(eggsQuantity > 0 && milkQuantity >= 12){
-            result = new HusbandShopResult(12, 0);
+            result = new HusbandShopResult(1, 12);
         }else if(milkQuantity > 0){
             result = new HusbandShopResult(1, 0);
         }else {

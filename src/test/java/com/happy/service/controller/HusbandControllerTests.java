@@ -42,8 +42,8 @@ public class HusbandControllerTests {
         when(productService.getMilkQty()).thenReturn(20);
 
         this.mockMvc.perform(post("/v1/husband/shop")).andExpect(status().isOk()).andDo(print()).
-                andExpect(MockMvcResultMatchers.jsonPath("$.milk").value(12)).
-                andExpect(MockMvcResultMatchers.jsonPath("$.eggs").value(0));
+                andExpect(MockMvcResultMatchers.jsonPath("$.milk").value(1)).
+                andExpect(MockMvcResultMatchers.jsonPath("$.eggs").value(12));
     }
 
     @Test
